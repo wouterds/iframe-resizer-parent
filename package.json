@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "iframe-resizer": "4.3.9",
+    "@iframe-resizer/parent": "^5.4.2",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
