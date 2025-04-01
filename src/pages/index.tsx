@@ -1,16 +1,15 @@
-import 'iframe-resizer/js/iframeResizer';
+import iframeResize from '@iframe-resizer/parent'
 import { useEffect, useRef } from 'react';
 
 export default function Home() {
   const iframe = useRef<HTMLIFrameElement>(null);
   
   useEffect(() => {
-    // @ts-expect-error - iframeResizer is not typed on Window
-    iFrameResize({
-      checkOrigin: false,
-      heightCalculationMethod: 'taggedElement',
-      scrolling: false,
-    }, iframe.current);
+    if (iframe.current) {
+      iframeResize({
+        license: 'GPLv3',
+      }, iframe.current);
+    }
   }, [])
 
   return (
